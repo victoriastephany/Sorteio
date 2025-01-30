@@ -22,35 +22,49 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 480px;
+    transition: all 0.3s ease-in-out;
+}
+
+.container:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 32px;
     color: #3f72af;
     margin-bottom: 20px;
-    font-weight: 600;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 p {
     font-size: 16px;
     color: #555;
     margin-bottom: 20px;
+    font-weight: 400;
 }
 
-input[type="text"] {
+textarea, input[type="number"] {
     width: 80%;
     padding: 12px;
     font-size: 16px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     border: 2px solid #3f72af;
-    border-radius: 8px;
+    border-radius: 10px;
     outline: none;
     background-color: #fafafa;
-    transition: border-color 0.3s ease;
+    transition: all 0.3s ease;
+    resize: none;
 }
 
-input[type="text"]:focus {
-    border-color: #a1c4fd;
+textarea {
+    height: 150px;
+}
+
+textarea:focus, input[type="number"]:focus {
+    border-color: #5a8fd2;
+    background-color: #f0f8ff;
+    box-shadow: 0 0 8px rgba(90, 143, 210, 0.5);
 }
 
 button {
@@ -61,11 +75,14 @@ button {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    width: 80%;
+    margin-top: 20px;
 }
 
 button:hover {
     background-color: #5a8fd2;
+    transform: translateY(-2px);
 }
 
 h2 {
@@ -74,10 +91,14 @@ h2 {
     color: #3f72af;
     font-weight: bold;
     transition: opacity 0.3s ease;
+    margin-top: 30px;
 }
 
 #resultado {
     opacity: 0;
+    font-size: 22px;
+    font-weight: 600;
+    color: #3f72af;
 }
 
 #resultado.show {
